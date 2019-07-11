@@ -1,6 +1,6 @@
 # stylist
 
-CSS-variables-alike Flutter theming.
+CSS-variables like Flutter theming.
 
 ## How does it work?
 
