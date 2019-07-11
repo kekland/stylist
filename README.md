@@ -38,12 +38,13 @@ Now you can use your style by calling `Style.of(context)`.
 ```dart
 final style = Style.of(context);
 
-final cardBorderColor = style.get<Color>("card-border-color"); // Automatically resolves the "app-primary-color" as a reference and gets the color.
+// Automatically resolves the "app-primary-color" as a reference and gets the color.
+final cardBorderColor = style.get<Color>("card-border-color"); 
 ```
 
 ## Benefits and downsides
 
-It is really flexible, but you might lose some custom behavior that is obtainable through classes. Nevertheless, the ease of use and ability to theme your app outside of the code makes up for it (You can also theme using internet, too.).
+It is really flexible, but you might lose some custom behavior that is obtainable through classes. Nevertheless, the ease of use makes up for it.
 
 ## Contact me
 
