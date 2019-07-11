@@ -1,44 +1,39 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:stylist/src/style_data.dart';
 
-class Style {
-  final Map<String, dynamic> _data;
+abstract class StyleState<T extends StatefulWidget> extends State<T> {
+  StyleData style;
 
-  Style(this._data);
+  I get<I>(String key);
 
-  factory Style.empty() {
-    return Style({});
-  }
+  set(String key, dynamic value);
+}
 
-  Style fork() {
-    return Style(Map.from(_data));
-  }
+class StaticStyle extends StatefulWidget {
+  final StyleData data;
 
-  void set(String key, dynamic value) {
-    _data[key] = value;
-  }
+  const StaticStyle({Key key, this.data}) : super(key: key);
+  @override
+  StaticStyleState createState() => StaticStyleState();
+}
 
-  dynamic get(String key) {
-    return _data[key];
-  }
-
-  static Style lerp(Style a, Style b, double t) {
-    Style newStyle = Style.empty();
-    final aMap = a._data;
-    MaterialApp
-    final bMap = b._data;
-
-    final keys = aMap.keys.toList();
-    bMap.keys.forEach((key) {
-      if (!aMap.containsKey(key)) keys.add(key);
-    });
-
-    for (final key in keys) {
-      final aValue = aMap[key];
-      final bValue = bMap[key];
+class StaticStyleState extends State<StaticStyle> {
+  @override
+  Widget build(BuildContext context) {
+    return _StaticStyleInherited(
       
-      if(FractionalOffset) {
+    );
+  }
+}
 
-      }
-    }
+class _StaticStyleInherited extends InheritedWidget {
+  final StaticStyleState data;
+
+  _StaticStyleInherited({this.data, Widget child, Key key}): super(key: key, child: child);
+  
+  @override
+  bool updateShouldNotify(InheritedWidget oldWidget) {
+    // TODO: implement updateShouldNotify
+    return null;
   }
 }
