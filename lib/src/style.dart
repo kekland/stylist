@@ -1,20 +1,31 @@
-class Style {
-  final Map<String, dynamic> data;
+import 'package:flutter/material.dart';
 
-  Style(this.data);
+class Style {
+  final Map<String, dynamic> _data;
+
+  Style(this._data);
 
   factory Style.empty() {
     return Style({});
   }
 
   Style fork() {
-    return Style(Map.from(data));
+    return Style(Map.from(_data));
+  }
+
+  void set(String key, dynamic value) {
+    _data[key] = value;
+  }
+
+  dynamic get(String key) {
+    return _data[key];
   }
 
   static Style lerp(Style a, Style b, double t) {
     Style newStyle = Style.empty();
-    final aMap = a.data;
-    final bMap = b.data;
+    final aMap = a._data;
+    MaterialApp
+    final bMap = b._data;
 
     final keys = aMap.keys.toList();
     bMap.keys.forEach((key) {
@@ -24,9 +35,10 @@ class Style {
     for (final key in keys) {
       final aValue = aMap[key];
       final bValue = bMap[key];
+      
+      if(FractionalOffset) {
 
-      if (aValue != null &&
-          bValue != null) {}
+      }
     }
   }
 }
