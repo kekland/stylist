@@ -4,9 +4,9 @@ CSS-variables like Flutter theming.
 
 ## How does it work?
 
-`stylist` is like CSS variables - it will be easy to pick up for any web developers.
+`stylist` is just like CSS variables - it will be easy to pick up and use for web developers.
 
-First, you create a `StyleData` instance. You can have multiple `StyleData` instances, and then inject them all into one big `StyleData`.
+First, you create `StyleData` instance. You can have multiple `StyleData` instances, and then inject them all into one big `StyleData`.
 
 ```dart
 StyleData cardStyle = StyleData({
@@ -20,14 +20,10 @@ StyleData appStyle = StyleData({
 })..inject(cardStyle)
 ```
 
-Then, you apply your style in your app root using either `AnimatedStyle` or `Style`.
+Then, you apply your style in your app root using `StaticStyle`.
 
 ```dart
-// If style changes - this will animate the entire thing.
-
-return AnimatedStyle(
-  duration: Duration(milliseconds: 300),
-  curve: Curves.easeInOut,
+return StaticStyle(
   style: appStyle,
   child: MaterialApp(...),
 );
