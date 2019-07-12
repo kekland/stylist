@@ -42,6 +42,8 @@ final cardBorderColor = style.get<Color>("card-border-color");
 
 It is really flexible, but you might lose some custom behavior that is obtainable through classes. Nevertheless, the ease of use makes up for it.
 
+By the way, it also supports hex string colors.
+
 ## Contact me
 
 **E-Mail**: `kk.erzhan@gmail.com`
