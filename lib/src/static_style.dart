@@ -1,6 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:stylist/src/style.dart';
-import 'package:stylist/src/style_data.dart';
+import 'package:stylist/stylist.dart';
 
 class StaticStyle extends StatefulWidget {
   final StyleData data;
@@ -23,7 +22,8 @@ class StaticStyle extends StatefulWidget {
   StaticStyleState createState() => StaticStyleState();
 }
 
-class StaticStyleState extends StyleState<StaticStyle> {
+class StaticStyleState extends State<StaticStyle> {
+  StyleData style;
   @override
   void didUpdateWidget(StaticStyle oldWidget) {
     super.didUpdateWidget(oldWidget);
@@ -33,11 +33,13 @@ class StaticStyleState extends StyleState<StaticStyle> {
   @override
   void initState() {
     super.initState();
+    print('static style initState');
     this.style = widget.data;
   }
 
   @override
   Widget build(BuildContext context) {
+    print('static style build');
     if (widget.inheritFromParent) {
       final parentData = StaticStyle.of(context);
       if(parentData != null) {

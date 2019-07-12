@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class StyleData {
   final Map<String, dynamic> _data;
@@ -39,6 +39,8 @@ class _StyleHandler {
   static handleValue({StyleData style, dynamic value}) {
     if (value is String) {
       return style.get(value) ?? value;
+    } else if (value is dynamic Function(StyleData)) {
+      return value(style);
     } else {
       return value;
     }

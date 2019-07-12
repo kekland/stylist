@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:stylist/src/style_data.dart';
+import 'package:stylist/stylist.dart';
 
 abstract class StyleState<T extends StatefulWidget> extends State<T> {
   StyleData style;
@@ -9,7 +9,7 @@ abstract class StyleState<T extends StatefulWidget> extends State<T> {
 }
 
 class StyleInherited extends InheritedWidget {
-  final StyleState data;
+  final StaticStyleState data;
 
   StyleInherited({this.data, Widget child, Key key})
       : super(key: key, child: child);
