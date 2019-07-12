@@ -9,7 +9,7 @@ class StaticStyle extends StatefulWidget {
   static StaticStyleState of(BuildContext context) {
     final StyleInherited style =
         context.inheritFromWidgetOfExactType(StyleInherited);
-    return style.data;
+    return style?.data;
   }
 
   const StaticStyle({
@@ -34,7 +34,9 @@ class StaticStyleState extends StyleState<StaticStyle> {
   Widget build(BuildContext context) {
     if (widget.inheritFromParent) {
       final parentData = StaticStyle.of(context);
-      this.style.inject(parentData.style);
+      if(parentData != null) {
+        this.style.inject(parentData.style);
+      }
     }
     return StyleInherited(
       data: this,
