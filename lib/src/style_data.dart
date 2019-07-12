@@ -18,12 +18,12 @@ class StyleData {
     this._data.addAll(other._data);
   }
 
-  void set(String key, dynamic value) {
+  set(String key, dynamic value) {
     _data[key] = value;
   }
 
   dynamic get(String key) {
-    return _data[key];
+    return _StyleHandler.handleValue(style: this, value: _data[key]);
   }
 }
 
