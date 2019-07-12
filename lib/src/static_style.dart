@@ -31,6 +31,12 @@ class StaticStyleState extends StyleState<StaticStyle> {
   }
 
   @override
+  void initState() {
+    super.initState();
+    this.style = widget.data;
+  }
+
+  @override
   Widget build(BuildContext context) {
     if (widget.inheritFromParent) {
       final parentData = StaticStyle.of(context);
