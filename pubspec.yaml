@@ -1,6 +1,6 @@
 name: stylist
 description: Stylist allows you to theme your Flutter application just like using CSS variables. It is really flexible and easy to use.
-version: 0.0.2
+version: 0.0.3
 author: kekland <kk.erzhan@gmail.com>
 homepage: https://github.com/kekland/stylist
 
