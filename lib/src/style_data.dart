@@ -47,7 +47,7 @@ class _StyleHandler {
 
 class _ValueUtils {
   static Color convertToColorFromString(dynamic value) {
-    if(value is String && value.length == 7 && value[0] == '#') {
+    if (value is String && value.length == 7 && value[0] == '#') {
       final intValue = int.parse(value.substring(1), radix: 16);
       return Color(intValue).withOpacity(1.0);
     }

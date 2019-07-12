@@ -8,7 +8,6 @@ abstract class StyleState<T extends StatefulWidget> extends State<T> {
   set(String key, dynamic value);
 }
 
-
 class StyleInherited extends InheritedWidget {
   final StyleState data;
 
