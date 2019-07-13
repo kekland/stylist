@@ -44,6 +44,10 @@ It is really flexible, but you might lose some custom behavior that is obtainabl
 
 By the way, it also supports hex string colors.
 
+## Want more CSS-like experience?
+
+Check out [division](https://github.com/ReinBentdal/division) - a great package for styling your apps :)
+
 ## Contact me
 
 **E-Mail**: `kk.erzhan@gmail.com`
